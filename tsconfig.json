@@ -1,0 +1,20 @@
+{
+  "extends": "@adonisjs/tsconfig/tsconfig.app.json",
+  "compilerOptions": {
+    "rootDir": "./",
+    "outDir": "./build",
+    "baseUrl": ".",
+    "paths": {
+      "@ioc/*": ["node_modules/@ioc/*"],
+      "#app/*": ["app/*"],
+      "#models/*": ["app/Models/*"],
+      "#controllers/*": ["app/Controllers/*"],
+      "#validators/*": ["app/Validators/*"],
+      "#utils/*": ["app/utils/*"]
+    },
+    "types": ["@adonisjs/core"], // important
+    "esModuleInterop": true,
+    "skipLibCheck": true
+  },
+  "include": ["start/**/*.ts", "app/**/*.ts", "config/validator_config.ts"]
+}
